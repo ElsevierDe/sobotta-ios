@@ -1,0 +1,27 @@
+platform :ios, '8.0'
+source 'https://github.com/CocoaPods/Specs.git'
+
+use_frameworks!
+
+pod 'UAModalPanel', '~> 1.1.1'
+pod 'BlocksKit', '~> 2.2'
+pod 'SparkInspector'
+pod 'apptentive-ios'
+pod 'GoogleConversionTracking', '~> 3.4'
+pod 'Firebase'
+pod 'GoogleAnalytics', '~> 3.13'
+pod 'GoogleIDFASupport'
+pod 'Fabric'
+pod 'Crashlytics', '~> 3.9'
+pod 'CocoaLumberjack'
+pod 'ObjectiveRecord'
+pod 'BonMot'
+pod 'GoogleSignIn', '~> 4.0'
+
+target 'sobotta-full' do
+
+end
+target 'sobotta-free' do
+
+end
+

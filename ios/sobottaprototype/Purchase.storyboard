@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UoT-FQ-gjM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="kA6-pb-SqB">
+            <objects>
+                <navigationController id="UoT-FQ-gjM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VlF-Ly-7Qd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8wa-qx-wG7" kind="relationship" relationship="rootViewController" id="9zA-8Z-BNy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QRO-jw-uPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-429" y="272"/>
+        </scene>
+        <!--Upgrade Sobotta-->
+        <scene sceneID="ydu-WZ-gMC">
+            <objects>
+                <viewController id="8wa-qx-wG7" customClass="HasVoucherController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Db7-jU-vNF"/>
+                        <viewControllerLayoutGuide type="bottom" id="qI4-17-UoS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xPf-gL-AMK">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Unlock all three Volumes (over 1600 figures) of the Sobotta Human Anatomy Atlas." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1D6-GK-hYl">
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <color key="textColor" red="0.34756292659999999" green="0.34904276880000001" blue="0.34918941980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Unlock single chapters from $9.99" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yen-gl-6Yx">
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <color key="textColor" red="0.34756292659999999" green="0.34904276880000001" blue="0.34918941980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbL-u2-i3o">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <state key="normal" title="Or do you have a voucher?x">
+                                    <color key="titleColor" red="0.34756292659999999" green="0.34904276880000001" blue="0.34918941980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="redeemVoucherClicked:" destination="8wa-qx-wG7" eventType="touchUpInside" id="SIS-Yp-5YI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlS-Vr-8MP">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <state key="normal" title="Restore previous purchase">
+                                    <color key="titleColor" red="0.34756292659999999" green="0.34904276880000001" blue="0.34918941980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="restoreButton:" destination="8wa-qx-wG7" eventType="touchUpInside" id="dG4-0s-1Vb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwi-dV-awN">
+                                <color key="backgroundColor" red="0.94568550586700439" green="0.42292362451553345" blue="0.10415250062942505" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="115" id="oBX-3x-sl2"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="16" minY="6" maxX="16" maxY="6"/>
+                                <state key="normal" title="Upgrade">
+                                    <color key="titleColor" red="0.94568550586700439" green="0.42292362451553345" blue="0.10415250062942505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="upgradeClicked:" destination="8wa-qx-wG7" eventType="touchUpInside" id="RKE-CF-nWJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VG6-nB-nWu">
+                                <color key="backgroundColor" red="0.94568550586700439" green="0.42292362451553345" blue="0.10415250062942505" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="500" constant="115" id="7du-8w-VLJ"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="16" minY="6" maxX="16" maxY="6"/>
+                                <state key="normal" title="Select chapter">
+                                    <color key="titleColor" red="0.94568550586700439" green="0.42292362451553345" blue="0.10415250062942505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="upgradeChapterButtonPressed:" destination="8wa-qx-wG7" eventType="touchUpInside" id="Gml-Fv-EfC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0g-Dh-ZET">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <state key="normal" title="Choose a different chapter">
+                                    <color key="titleColor" red="0.34756292659999999" green="0.34904276880000001" blue="0.34918941980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="FBp-Ef-HuW" kind="show" id="yWB-tq-5wV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UbL-u2-i3o" firstAttribute="top" secondItem="k0g-Dh-ZET" secondAttribute="bottom" constant="5" id="1xa-5h-cRp"/>
+                            <constraint firstItem="UbL-u2-i3o" firstAttribute="leading" secondItem="xPf-gL-AMK" secondAttribute="leading" id="FBB-S2-uma"/>
+                            <constraint firstAttribute="trailing" secondItem="UbL-u2-i3o" secondAttribute="trailing" id="FUG-Tp-aYQ"/>
+                            <constraint firstItem="Yen-gl-6Yx" firstAttribute="top" secondItem="uwi-dV-awN" secondAttribute="bottom" constant="32" id="GbE-Rv-CbP"/>
+                            <constraint firstItem="1D6-GK-hYl" firstAttribute="leading" secondItem="xPf-gL-AMK" secondAttribute="leading" id="GiC-d6-blU"/>
+                            <constraint firstAttribute="trailing" secondItem="k0g-Dh-ZET" secondAttribute="trailing" id="JfO-bK-Zex"/>
+                            <constraint firstItem="1D6-GK-hYl" firstAttribute="top" secondItem="Db7-jU-vNF" secondAttribute="bottom" constant="32" id="RJH-Nk-DPN"/>
+                            <constraint firstItem="xlS-Vr-8MP" firstAttribute="top" secondItem="UbL-u2-i3o" secondAttribute="bottom" constant="5" id="SXR-0S-W07"/>
+                            <constraint firstItem="k0g-Dh-ZET" firstAttribute="top" secondItem="VG6-nB-nWu" secondAttribute="bottom" constant="30" id="UXj-Dr-Wkc"/>
+                            <constraint firstItem="VG6-nB-nWu" firstAttribute="centerX" secondItem="xPf-gL-AMK" secondAttribute="centerX" id="VfI-y5-zfn"/>
+                            <constraint firstItem="uwi-dV-awN" firstAttribute="centerX" secondItem="xPf-gL-AMK" secondAttribute="centerX" id="Zjl-WR-VUB"/>
+                            <constraint firstItem="xlS-Vr-8MP" firstAttribute="leading" secondItem="xPf-gL-AMK" secondAttribute="leading" id="fSq-oG-XyS"/>
+                            <constraint firstAttribute="trailing" secondItem="Yen-gl-6Yx" secondAttribute="trailing" id="jt1-nW-Zsj"/>
+                            <constraint firstItem="k0g-Dh-ZET" firstAttribute="leading" secondItem="xPf-gL-AMK" secondAttribute="leading" id="ldC-Mr-7IJ"/>
+                            <constraint firstAttribute="trailing" secondItem="xlS-Vr-8MP" secondAttribute="trailing" id="r2h-ha-tVy"/>
+                            <constraint firstItem="VG6-nB-nWu" firstAttribute="top" secondItem="Yen-gl-6Yx" secondAttribute="bottom" constant="16" id="tTD-LR-SJK"/>
+                            <constraint firstAttribute="trailing" secondItem="1D6-GK-hYl" secondAttribute="trailing" id="u1S-ig-k2X"/>
+                            <constraint firstItem="Yen-gl-6Yx" firstAttribute="leading" secondItem="xPf-gL-AMK" secondAttribute="leading" id="w66-NY-ycV"/>
+                            <constraint firstItem="uwi-dV-awN" firstAttribute="top" secondItem="1D6-GK-hYl" secondAttribute="bottom" constant="16" id="yGX-BY-Ikw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Upgrade Sobotta" id="fnD-Py-YLO">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="2Cv-2I-J2K">
+                            <connections>
+                                <action selector="closePressed:" destination="8wa-qx-wG7" id="mfD-tQ-ZdD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="400"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="600"/>
+                    <connections>
+                        <outlet property="closeButton" destination="2Cv-2I-J2K" id="TYn-yM-yCy"/>
+                        <outlet property="lblChooseDifferentChapter" destination="k0g-Dh-ZET" id="xkj-aE-vvW"/>
+                        <outlet property="lblDoYouHaveVoucher" destination="UbL-u2-i3o" id="he3-Yn-OKm"/>
+                        <outlet property="lblRestore" destination="xlS-Vr-8MP" id="n2v-4g-1hr"/>
+                        <outlet property="lblTextUpgradeText" destination="1D6-GK-hYl" id="l8x-DD-ARb"/>
+                        <outlet property="lblUpgradeChapter" destination="Yen-gl-6Yx" id="MXG-ZO-DAf"/>
+                        <outlet property="upgradeButton" destination="uwi-dV-awN" id="fU5-Hr-0kX"/>
+                        <outlet property="upgradeChapterButton" destination="VG6-nB-nWu" id="74h-hr-euv"/>
+                        <segue destination="FBp-Ef-HuW" kind="show" identifier="ShowUnlockChapter" id="bB1-fz-KFc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zde-4R-MZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="473" y="272"/>
+        </scene>
+        <!--Unlock chapter-->
+        <scene sceneID="JfZ-Vh-wVs">
+            <objects>
+                <tableViewController id="FBp-Ef-HuW" customClass="PurchaseBundleTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qts-MR-Fb7">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="HeaderTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderTableViewCell" rowHeight="100" id="Gae-Uq-0bj" customClass="BundleHeaderTableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="300" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gae-Uq-0bj" id="9zh-7R-UQ0">
+                                    <frame key="frameInset" width="300" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The free Sobotta version offers a preview of every chapter. Feel free to browse through the chapters before buying." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVk-gJ-SZN">
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                            <color key="textColor" red="0.34756292659999999" green="0.34904276880000001" blue="0.34918941980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="QVk-gJ-SZN" secondAttribute="trailing" constant="8" id="7TA-Fz-HZI"/>
+                                        <constraint firstItem="QVk-gJ-SZN" firstAttribute="leading" secondItem="9zh-7R-UQ0" secondAttribute="leading" constant="8" id="GeF-O3-GAH"/>
+                                        <constraint firstItem="QVk-gJ-SZN" firstAttribute="top" secondItem="9zh-7R-UQ0" secondAttribute="top" constant="11" id="SpD-9H-o9k"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="headerLabel" destination="QVk-gJ-SZN" id="wHf-Fb-jAC"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BundleTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="BundleTableViewCell" id="nKt-WO-rWF" customClass="BundleTableViewCell">
+                                <rect key="frame" x="0.0" y="192" width="300" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nKt-WO-rWF" id="of3-m8-gDT">
+                                    <frame key="frameInset" width="300" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Chapter Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D44-mX-UIa">
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                            <color key="textColor" red="0.34756292659999999" green="0.34904276880000001" blue="0.34918941980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xT-Rq-U1J">
+                                            <inset key="contentEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                                            <state key="normal" title="Openabc"/>
+                                            <connections>
+                                                <action selector="purchasePressed:" destination="nKt-WO-rWF" eventType="touchUpInside" id="Ief-oJ-Bja"/>
+                                            </connections>
+                                        </button>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="MYG-6X-F7A"/>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="6xT-Rq-U1J" secondAttribute="trailing" constant="8" id="08K-5J-pyu"/>
+                                        <constraint firstItem="6xT-Rq-U1J" firstAttribute="centerY" secondItem="of3-m8-gDT" secondAttribute="centerY" id="7Or-yz-olN"/>
+                                        <constraint firstItem="6xT-Rq-U1J" firstAttribute="leading" secondItem="D44-mX-UIa" secondAttribute="trailing" constant="8" id="NHk-ww-JEY"/>
+                                        <constraint firstItem="MYG-6X-F7A" firstAttribute="centerY" secondItem="of3-m8-gDT" secondAttribute="centerY" id="dEm-Op-53x"/>
+                                        <constraint firstItem="D44-mX-UIa" firstAttribute="centerY" secondItem="of3-m8-gDT" secondAttribute="centerY" id="h7x-5H-j7y"/>
+                                        <constraint firstAttribute="trailing" secondItem="MYG-6X-F7A" secondAttribute="trailing" constant="17" id="pYZ-hb-RRq"/>
+                                        <constraint firstItem="D44-mX-UIa" firstAttribute="leading" secondItem="of3-m8-gDT" secondAttribute="leading" constant="8" id="rJt-Cf-n67"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="chapterName" destination="D44-mX-UIa" id="wdX-C8-ZgM"/>
+                                    <outlet property="purchaseActivityIndicator" destination="MYG-6X-F7A" id="M7b-kF-Rgw"/>
+                                    <outlet property="purchaseOrOpenButton" destination="6xT-Rq-U1J" id="yaR-kz-xpH"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FBp-Ef-HuW" id="KT6-H2-Ne8"/>
+                            <outlet property="delegate" destination="FBp-Ef-HuW" id="SeJ-tq-WP8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Unlock chapter" id="e0F-YK-WNM">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="lpI-7a-xiD">
+                            <connections>
+                                <action selector="closePressed:" destination="FBp-Ef-HuW" id="MvN-jV-v1R"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="closeButton" destination="lpI-7a-xiD" id="OPU-BY-FGr"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8CE-9f-Vnb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941" y="219"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bB1-fz-KFc"/>
+    </inferredMetricsTieBreakers>
+</document>

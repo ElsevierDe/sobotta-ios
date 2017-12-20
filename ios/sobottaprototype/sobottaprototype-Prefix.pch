@@ -1,0 +1,86 @@
+//
+// Prefix header for all source files of the 'sobottaprototype' target in the 'sobottaprototype' project
+//
+
+// #define SOB_DEBUG
+
+#define LOG_LEVEL_DEF ddLogLevel
+
+@import CocoaLumberjack;
+
+//#import <CocoaLumberjack/CocoaLumberjack.h>
+
+#import <Availability.h>
+
+#import <BlocksKit/BlocksKit.h>
+#import <BlocksKit/BlocksKit+UIKit.h>
+
+#import <ObjectiveRecord/ObjectiveRecord.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+	#import <UIKit/UIKit.h>
+	#import <Foundation/Foundation.h>
+	#import <CoreData/CoreData.h>
+	#import <QuartzCore/QuartzCore.h>
+
+#endif
+
+#ifdef DEBUG
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+#else
+static const DDLogLevel ddLogLevel = DDLogLevelWarning;
+#endif
+
+
+#ifndef SOB_VARIANT
+#error SOB_VARIANT is not defined!
+#endif
+
+#define SOB_PAID_APPID @"567740950"
+#define SOB_PAID_APPLINK @"itms-apps://itunes.apple.com/app/sobotta-anatomie-atlas/id567740950"
+
+#if SOB_VARIANT == 1
+    // international sobotta
+//    #define SOB_APPID @"https://userpub.itunes.apple.com/WebObjects/MZUserPublishing.woa/wa/addUserReview?id=337064413&type=Purple+Software"
+    #define SOB_APPID SOB_PAID_APPID
+#elif SOB_VARIANT == 2
+    // international free sobotta
+    #define SOB_FREE 1
+    #define SOB_APPID @"567740966"
+#elif SOB_VARIANT == 3
+    // US sobotta
+#elif SOB_VARIANT == 4
+    // US sobotta free
+    #define SOB_FREE 1
+#endif
+
+#ifdef SOB_FREE
+    #define SOB_FB_APPID @"599503480100122"
+    #define SOB_GOOGLEPLUS_ID @"65596977305-ihbobreo8he5s22brtr3ftpbbrpotsb3.apps.googleusercontent.com"
+    // Apptentive api key
+    #define SOB_AT_APIKEY @"d2b28a8cda712c7d5311cc6bde8bb0023934f7fce59984e83e54a774c54c0abe"
+    #define SOB_IS_FREE YES
+#else
+    #define SOB_IS_FREE NO
+    #define SOB_FB_APPID @"382274241898377"
+    #define SOB_GOOGLEPLUS_ID @"65596977305-1cf7jc51rvh153rooorh86ev4gof663d.apps.googleusercontent.com"
+    // Apptentive api key
+    #define SOB_AT_APIKEY @"f5e5001d857f59671ad0238c944483c8949b7a632b99648b7b4cbcfe18f7a20a"
+#endif
+
+#define IS_PHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+
+#define IS_IOS_8_OR_LATER floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_7_1
+
+#define NOTIFICATION_OPEN_URL @"openurlnotification"
+
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
+#import <KKGridView/KKGridView.h>
+#import "Theme.h"
+#import "Global.h"

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>385EC40D-773B-4F21-9C68-729050338B1F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>sobottaprototype</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3D8EE0D2BC45FAB77029D6E982570FD7C72D790C</key>
+		<string>ssh://dev/var/lib/git/elsevier-sobotta.git</string>
+		<key>BEC502BBB23360C3C13C7E27AD5C216BAC7A48CA</key>
+		<string>https://github.com/hpoul/KKGridView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios/sobottaprototype.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3D8EE0D2BC45FAB77029D6E982570FD7C72D790C</key>
+		<string>../..</string>
+		<key>BEC502BBB23360C3C13C7E27AD5C216BAC7A48CA</key>
+		<string>../../ios-lib/KKGridView</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://dev/var/lib/git/elsevier-sobotta.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3D8EE0D2BC45FAB77029D6E982570FD7C72D790C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3D8EE0D2BC45FAB77029D6E982570FD7C72D790C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>elsevier-sobotta</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BEC502BBB23360C3C13C7E27AD5C216BAC7A48CA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>KKGridView</string>
+		</dict>
+	</array>
+</dict>
+</plist>

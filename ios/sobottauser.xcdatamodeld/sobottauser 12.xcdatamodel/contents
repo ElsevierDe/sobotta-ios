@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Bookmark" representedClassName="Bookmark" syncable="YES">
+        <attribute name="figure_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="updated" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="bookmarklist" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bookmarklist" inverseName="bookmarks" inverseEntity="Bookmarklist" syncable="YES"/>
+    </entity>
+    <entity name="Bookmarklist" representedClassName="Bookmarklist" syncable="YES">
+        <attribute name="deleted" optional="YES" attributeType="Boolean" defaultValueString="NO" indexed="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sectionalias" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="updated" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="bookmarks" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Bookmark" inverseName="bookmarklist" inverseEntity="Bookmark" syncable="YES"/>
+        <relationship name="trainings" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Training" inverseName="bookmarklist" inverseEntity="Training" syncable="YES"/>
+    </entity>
+    <entity name="FigureProxy" representedClassName="FigureProxy" syncable="YES">
+        <attribute name="figure_id" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="bestTrainingResult" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Training_Figures" syncable="YES"/>
+        <relationship name="latestTrainingResult" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Training_Figures" syncable="YES"/>
+        <relationship name="worstTrainingResult" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Training_Figures" syncable="YES"/>
+    </entity>
+    <entity name="Note" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="label_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updated" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="Training" representedClassName="Training" syncable="YES">
+        <attribute name="amount_answered" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="amount_completed_figures" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="amount_correct" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="amount_skipped" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="amount_wrong" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="currentindex" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="currentmode" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="end" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="inprogress" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nametype" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="searchterm" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="start" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="bookmarklist" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bookmarklist" inverseName="trainings" inverseEntity="Bookmarklist" syncable="YES"/>
+        <relationship name="figures" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Training_Figures" inverseName="training" inverseEntity="Training_Figures" syncable="YES"/>
+    </entity>
+    <entity name="Training_Figure_Labels" representedClassName="Training_Figure_Labels" syncable="YES">
+        <attribute name="label_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="figure" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Training_Figures" inverseName="labels" inverseEntity="Training_Figures" syncable="YES"/>
+    </entity>
+    <entity name="Training_Figures" representedClassName="Training_Figures" syncable="YES">
+        <attribute name="amount_correct" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="amount_wrong" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="completed" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="figure_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="percent_correct" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="labels" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Training_Figure_Labels" inverseName="figure" inverseEntity="Training_Figure_Labels" syncable="YES"/>
+        <relationship name="training" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Training" inverseName="figures" inverseEntity="Training" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Bookmark" positionX="160" positionY="192" width="128" height="103"/>
+        <element name="Bookmarklist" positionX="412" positionY="198" width="128" height="135"/>
+        <element name="FigureProxy" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="Note" positionX="-20" positionY="198" width="128" height="120"/>
+        <element name="Training" positionX="-18" positionY="126" width="128" height="270"/>
+        <element name="Training_Figure_Labels" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="Training_Figures" positionX="160" positionY="192" width="128" height="165"/>
+    </elements>
+</model>

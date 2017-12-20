@@ -1,0 +1,12 @@
+#app_identifier "today.meetyourfriends.alpha" # The bundle identifier of your app
+app_identifier ENV["APP_IDENTIFIER"]
+
+team_id "TL394L7FJE"  # Developer Portal Team ID
+
+# you can even provide different app identifiers, Apple IDs and team names per lane:
+# More information: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Appfile.md
+
+#apple_id "laurin@austrianapps.com" # Your Apple email address
+# in case your apple id and itunes id are different, use this instead of apple_id:
+ apple_dev_portal_id "laurin@austrianapps.com"
+ itunes_connect_id "laurin+elsevier@austrianapps.com"

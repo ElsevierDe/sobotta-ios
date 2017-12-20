@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3D8EE0D2BC45FAB77029D6E982570FD7C72D790C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3D8EE0D2BC45FAB77029D6E982570FD7C72D790C" : 0,
+    "BEC502BBB23360C3C13C7E27AD5C216BAC7A48CA" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BCF0AFDB-E990-4693-BDE8-7D9E7A759B9B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3D8EE0D2BC45FAB77029D6E982570FD7C72D790C" : "elsevier-sobotta",
+    "BEC502BBB23360C3C13C7E27AD5C216BAC7A48CA" : "elsevier-sobottaios-lib\/KKGridView"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "sobottaprototype",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/sobottaprototype.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/dev\/var\/lib\/git\/elsevier-sobotta.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3D8EE0D2BC45FAB77029D6E982570FD7C72D790C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/hpoul\/KKGridView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BEC502BBB23360C3C13C7E27AD5C216BAC7A48CA"
+    }
+  ]
+}

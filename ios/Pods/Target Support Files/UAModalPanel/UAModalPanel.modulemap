@@ -1,0 +1,6 @@
+framework module UAModalPanel {
+  umbrella header "UAModalPanel-umbrella.h"
+
+  export *
+  module * { export * }
+}

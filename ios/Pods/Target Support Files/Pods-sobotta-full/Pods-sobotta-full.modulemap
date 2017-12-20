@@ -1,0 +1,6 @@
+framework module Pods_sobotta_full {
+  umbrella header "Pods-sobotta-full-umbrella.h"
+
+  export *
+  module * { export * }
+}

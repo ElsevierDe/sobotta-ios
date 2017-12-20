@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1487" systemVersion="12B19" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Bookmark" representedClassName="Bookmark" syncable="YES">
+        <attribute name="figure_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="updated" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="bookmarklist" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bookmarklist" inverseName="bookmarks" inverseEntity="Bookmarklist" syncable="YES"/>
+    </entity>
+    <entity name="Bookmarklist" representedClassName="Bookmarklist" syncable="YES">
+        <attribute name="deleted" optional="YES" attributeType="Boolean" defaultValueString="NO" indexed="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updated" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="bookmarks" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bookmark" inverseName="bookmarklist" inverseEntity="Bookmark" syncable="YES"/>
+        <relationship name="trainings" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Training" inverseName="bookmarklist" inverseEntity="Training" syncable="YES"/>
+    </entity>
+    <entity name="Note" syncable="YES">
+        <attribute name="created" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="figure_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updated" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="Training" syncable="YES">
+        <attribute name="amount_answered" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="amount_correct" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="amount_skipped" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="amount_wrong" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="chapter_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="currentfigure_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="currentlabel_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="currentmode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="end" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="inprogress" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="searchterm" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="start" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="bookmarklist" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bookmarklist" inverseName="trainings" inverseEntity="Bookmarklist" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Bookmark" positionX="160" positionY="192" width="128" height="103"/>
+        <element name="Bookmarklist" positionX="412" positionY="198" width="128" height="120"/>
+        <element name="Note" positionX="-20" positionY="198" width="128" height="103"/>
+        <element name="Training" positionX="-18" positionY="126" width="128" height="238"/>
+    </elements>
+</model>
